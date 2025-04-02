@@ -1,0 +1,4 @@
+*.svg
+
+# include only icons we are using
+!/solid/check.svg

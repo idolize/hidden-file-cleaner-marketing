@@ -4,6 +4,29 @@ const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
 
+  experimental: {
+    reactCompiler: true,
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      use: [
+        {
+          loader: '@svgr/webpack',
+        },
+      ],
+    })
+    return config
+  },
+
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
 

@@ -1,3 +1,42 @@
 {
-  "title": "Hidden File Cleaner"
+  "title": "Hidden File Cleaner",
+  "tagline": "Remove macOS metadata clutter in a single click",
+  "hero": {
+    "description": "A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices."
+  },
+  "features": [
+    {
+      "title": "One-Click Cleanup",
+      "description": "Remove .DS_Store and AppleDouble files with a single click, no complex settings or configurations needed."
+    },
+    {
+      "title": "Safe & Secure",
+      "description": "Preview exactly what will be removed before cleaning, ensuring your data remains intact."
+    },
+    {
+      "title": "Clean & Eject",
+      "description": "Combined functionality to clean metadata and safely eject drives in one action."
+    },
+    {
+      "title": "Lightweight & Simple",
+      "description": "No menu bar clutter or background processes. Run it when you need it, nothing more."
+    }
+  ],
+  "pricing": {
+    "title": "Simple, One-Time Pricing",
+    "description": "Purchase once, use forever. No subscriptions or hidden fees.",
+    "price": "8.99",
+    "currency": "USD",
+    "features": [
+      "Perpetual license",
+      "Free updates",
+      "One-time payment",
+      "No monthly fees"
+    ],
+    "volumePricing": "Contact us for volume licensing options"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": []
+  }
 }
