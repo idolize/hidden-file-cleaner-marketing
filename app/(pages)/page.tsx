@@ -1,72 +1,26 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import CheckIcon from '@/app/icons/solid/check.svg'
-import marketing from '@/content/marketing.json';
+import marketing from '../../content/marketing.json';
+import Navigation from '../components/Navigation';
+import AnimatedSection from '../components/AnimatedSection';
+
+export const metadata = {
+  title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
+  description: 'A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices.',
+};
 
 export default function Home() {
-  const sections = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-8');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    sections.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollToSection = (index: number) => {
-    sections.current[index]?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const setSectionRef = (index: number) => (el: HTMLDivElement | null) => {
-    sections.current[index] = el;
-  };
-
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-xl z-50 border-b border-[rgb(var(--gray-200))]">
-        <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <h1 className="text-xl font-semibold tracking-tight"><Link href="/">{marketing.title}</Link></h1>
-          <div className="flex space-x-8">
-            {['Features', 'Pricing', 'FAQ'].map((item, index) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(index + 1)}
-                className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        </nav>
+        <Navigation title={marketing.title} />
       </header>
 
       {/* Hero Section */}
-      <section
-        ref={setSectionRef(0)}
-        className="pt-32 pb-24 px-6 max-w-7xl mx-auto opacity-0 translate-y-8 transition-all duration-700"
-      >
+      <AnimatedSection className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 space-y-8">
-            <h2 className="display-large text-gradient pb-1">
+            <h2 className="display-large text-gradient">
               {marketing.tagline}
             </h2>
             <p className="body-large text-[rgb(var(--gray-600))]">
@@ -77,22 +31,23 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:w-1/2">
+            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/screenshot.png"
                 alt="Hidden File Cleaner Screenshot"
-                width={774}
-                height={581}
-                className=""
+                fill
+                className="object-cover"
                 priority
               />
+            </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Features Section */}
-      <section
-        ref={setSectionRef(1)}
-        className="section-padding px-6 bg-[rgb(var(--gray-50))] opacity-0 translate-y-8 transition-all duration-700"
+      <AnimatedSection
+        id="features"
+        className="section-padding px-6 bg-[rgb(var(--gray-50))]"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="display-medium text-center mb-16">Features</h2>
@@ -108,12 +63,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Pricing Section */}
-      <section
-        ref={setSectionRef(2)}
-        className="section-padding px-6 opacity-0 translate-y-8 transition-all duration-700"
+      <AnimatedSection
+        id="pricing"
+        className="section-padding px-6"
       >
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="display-medium mb-6">{marketing.pricing.title}</h2>
@@ -128,7 +83,19 @@ export default function Home() {
             <ul className="space-y-4 mb-12">
               {marketing.pricing.features.map((feature, index) => (
                 <li key={index} className="flex items-center justify-center text-lg">
-                  <CheckIcon className="w-5 h-5 text-[rgb(var(--blue-600))] mr-3 flex-shrink-0" />
+                  <svg
+                    className="w-5 h-5 text-[rgb(var(--blue-600))] mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -141,12 +108,12 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* FAQ Section */}
-      <section
-        ref={setSectionRef(3)}
-        className="section-padding px-6 bg-[rgb(var(--gray-50))] opacity-0 translate-y-8 transition-all duration-700"
+      <AnimatedSection
+        id="faq"
+        className="section-padding px-6 bg-[rgb(var(--gray-50))]"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="display-medium text-center mb-16">
@@ -163,7 +130,7 @@ export default function Home() {
             )}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </main>
   );
 }
