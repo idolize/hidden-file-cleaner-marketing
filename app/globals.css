@@ -51,7 +51,7 @@ section {
 }
 
 /* Button hover effects */
-button {
+button, a {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }

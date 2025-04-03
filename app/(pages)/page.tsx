@@ -2,6 +2,7 @@ import Image from 'next/image';
 import marketing from '../../content/marketing.json';
 import Navigation from '../components/Navigation';
 import AnimatedSection from '../components/AnimatedSection';
+import BuyButton from '../components/BuyButton';
 
 export const metadata = {
   title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
@@ -26,9 +27,13 @@ export default function Home() {
             <p className="body-large text-[rgb(var(--gray-600))]">
               {marketing.hero.description}
             </p>
-            <button className="bg-gradient text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity">
+            <a
+              className="bg-gradient text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
+              href="https://updates.hiddenfilecleaner.app/latest.dmg"
+              download
+            >
               Download Now
-            </button>
+            </a>
           </div>
           <div className="lg:w-1/2">
             <Image
@@ -98,9 +103,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <button className="bg-gradient text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity w-full mb-6">
-              Purchase Now
-            </button>
+            <BuyButton />
             <p className="text-sm text-[rgb(var(--gray-600))]">
               {marketing.pricing.volumePricing}
             </p>

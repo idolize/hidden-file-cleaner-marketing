@@ -37,7 +37,7 @@ export default function AnimatedSection({ children, className = '', id }: Animat
     <section
       ref={sectionRef}
       id={id}
-      className={`opacity-0 translate-y-8 transition-all duration-700 ${className}`}
+      className={`opacity-10 translate-y-8 transition-all duration-700 ${className}`}
     >
       {children}
     </section>
