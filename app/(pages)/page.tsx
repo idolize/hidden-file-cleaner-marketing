@@ -31,15 +31,13 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:w-1/2">
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/screenshot.png"
-                alt="Hidden File Cleaner Screenshot"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <Image
+              src="/screenshot.png"
+              alt="Hidden File Cleaner Screenshot"
+              priority
+              width={774}
+              height={581}
+            />
           </div>
         </div>
       </AnimatedSection>

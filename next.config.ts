@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+
+  // TODO try Cloudflare Image Optimization
+  // https://developers.cloudflare.com/images/transform-images/integrate-with-frameworks/
   images: { unoptimized: true },
 
   experimental: {

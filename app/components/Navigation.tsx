@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 interface NavigationProps {
   title: string;
 }
@@ -14,7 +16,7 @@ export default function Navigation({ title }: NavigationProps) {
 
   return (
     <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
+      <h1 className="text-xl font-semibold tracking-tight"><Link href="/">{title}</Link></h1>
       <div className="flex space-x-8">
         {['Features', 'Pricing', 'FAQ'].map((item) => (
           <button
