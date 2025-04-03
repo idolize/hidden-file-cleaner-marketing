@@ -1,25 +1,25 @@
 {
   "title": "Hidden File Cleaner",
-  "tagline": "Remove macOS metadata clutter in a single click",
+  "tagline": "Remove macOS clutter",
   "hero": {
     "description": "A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices."
   },
   "features": [
     {
       "title": "One-Click Cleanup",
-      "description": "Remove .DS_Store and AppleDouble files with a single click, no complex settings or configurations needed."
+      "description": "Remove hidden .DS_Store, ._ (AppleDouble), .Spotlight-V100, etc. files with a single click."
     },
     {
       "title": "Safe & Secure",
-      "description": "Preview exactly what will be removed before cleaning, ensuring your data remains intact."
+      "description": "Preview exactly what will be removed before cleaning. No surprises."
     },
     {
       "title": "Clean & Eject",
-      "description": "Combined functionality to clean metadata and safely eject drives in one action."
+      "description": "Cleanup metadata and safely eject drives when you're done using them."
     },
     {
       "title": "Lightweight & Simple",
-      "description": "No menu bar clutter or background processes. Run it when you need it, nothing more."
+      "description": "No menu bar clutter or background processes. Run it when you need it."
     }
   ],
   "pricing": {

@@ -3,6 +3,7 @@ import marketing from '../../content/marketing.json';
 import Navigation from '../components/Navigation';
 import AnimatedSection from '../components/AnimatedSection';
 import BuyButton from '../components/BuyButton';
+import AppleIcon from '../icons/brands/apple.svg';
 
 export const metadata = {
   title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
@@ -18,8 +19,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <AnimatedSection className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+      <AnimatedSection className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative">
+        <Image
+          src="/hiddenfilecleaner.png"
+          alt="Hidden File Cleaner Icon"
+          width={512}
+          height={512}
+          className="absolute top-1/2 -translate-y-1/2 opacity-5 pointer-events-none"
+          priority
+        />
+        <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
           <div className="lg:w-1/2 space-y-8">
             <h2 className="display-large text-gradient">
               {marketing.tagline}
@@ -28,11 +37,15 @@ export default function Home() {
               {marketing.hero.description}
             </p>
             <a
-              className="bg-gradient text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
-              href="https://updates.hiddenfilecleaner.app/latest.dmg"
               download
+              href="https://updates.hiddenfilecleaner.app/latest.dmg"
+              className="bg-gradient inline-flex flex-col shrink items-center text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
             >
-              Download Now
+              <div className="flex flex-row gap-2 items-center">
+                <AppleIcon className="w-4 h-4" />
+                <span>Download Now</span>
+              </div>
+              <span className="text-xs text-white font-normal">macOS 14+</span>
             </a>
           </div>
           <div className="lg:w-1/2">
