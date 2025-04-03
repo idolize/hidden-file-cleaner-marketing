@@ -1,6 +1,6 @@
 # Hidden File Cleaner Marketing Pages
 
-Marketing pages for Hidden File Cleaner.
+Marketing pages for Hidden File Cleaner. Deployed to <https://hiddenfilecleaner.app>.
 
 ## Getting Started
 
