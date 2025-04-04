@@ -1,6 +1,6 @@
 'use client';
 
-import { Dialog, DialogPanel } from '@headlessui/react';
+import { Dialog, DialogPanel, DialogBackdrop, DialogTitle } from '@headlessui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -58,12 +58,18 @@ export default function Navigation({ title }: NavigationProps) {
       </button>
 
       {/* Mobile Menu Dialog */}
-      <Dialog as="div" className="fixed inset-0 z-50 md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" aria-hidden="true" />
+      <Dialog
+        transition
+        as="div"
+        className="fixed inset-0 z-50 md:hidden transition duration-300 ease-out data-[closed]:opacity-0"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
+        <DialogBackdrop className="fixed inset-0 bg-black/30" />
 
         <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-xs bg-white p-6 shadow-xl">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-semibold">{title}</h2>
+            <DialogTitle className="text-xl font-semibold">{title}</DialogTitle>
             <button type="button" onClick={() => setMobileMenuOpen(false)} className="text-[rgb(var(--gray-600))]">
               <XMarkIcon className="w-6 h-6" />
             </button>
