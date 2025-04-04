@@ -20,16 +20,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <AnimatedSection className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative">
-        <Image
-          src="/hiddenfilecleaner.png"
-          alt="Hidden File Cleaner Icon"
-          width={512}
-          height={512}
-          className="absolute top-1/2 -translate-y-1/2 opacity-5 pointer-events-none"
-          priority
-        />
         <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
-          <div className="lg:w-1/2 space-y-8">
+          <div className="flex flex-col lg:w-1/2 space-y-8">
             <h2 className="display-large text-gradient">
               {marketing.tagline}
             </h2>
@@ -39,9 +31,9 @@ export default function Home() {
             <a
               download
               href="https://updates.hiddenfilecleaner.app/latest.dmg"
-              className="bg-gradient inline-flex flex-col shrink items-center text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
+              className="bg-gradient flex flex-col m-auto lg:ml-0 shrink items-center text-white px-16 lg:px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
             >
-              <div className="flex flex-row gap-2 items-center">
+              <div className="flex flex-row gap-2 items-center md:m-auto">
                 <AppleIcon className="w-4 h-4" />
                 <span>Download Now</span>
               </div>
@@ -50,11 +42,12 @@ export default function Home() {
           </div>
           <div className="lg:w-1/2">
             <Image
-              src="/screenshot.png"
-              alt="Hidden File Cleaner Screenshot"
+              className="hidden lg:block"
+              src="/hiddenfilecleaner.png"
+              alt="Hidden File Cleaner Icon"
               priority
-              width={774}
-              height={581}
+              width={512}
+              height={512}
             />
           </div>
         </div>
@@ -63,17 +56,32 @@ export default function Home() {
       {/* Features Section */}
       <AnimatedSection
         id="features"
-        className="section-padding px-6 bg-[rgb(var(--gray-50))]"
+        className="section-padding px-6 relative overflow-hidden bg-slate-50"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="absolute inset-0">
+          <div className="absolute left-1/2 -translate-x-1/2 top-[400px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.100)_0%,transparent_70%)]" />
+        </div>
+        <div className="max-w-7xl mx-auto relative">
+          <div className="mb-16">
+            <div className="relative max-w-3xl mx-auto overflow-hidden" style={{ height: '466px' }}>
+              <div className="absolute left-0 right-0 bottom-0 bg-gradient-to-b from-transparent via-transparent to-white z-10" style={{ height: '200px' }} />
+              <Image
+                src="/screenshot.png"
+                alt="Hidden File Cleaner Screenshot"
+                width={774}
+                height={581}
+                className="relative mx-auto"
+              />
+            </div>
+          </div>
           <h2 className="display-medium text-center mb-16">Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {marketing.features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[hsla(0,0%,98%,.7)] p-8 rounded-2xl shadow-md hover:shadow-lg backdrop-blur-xl transition-shadow"
               >
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
                 <p className="text-[rgb(var(--gray-600))]">{feature.description}</p>
               </div>
             ))}
@@ -100,7 +108,7 @@ export default function Home() {
               {marketing.pricing.features.map((feature, index) => (
                 <li key={index} className="flex items-center justify-center text-lg">
                   <svg
-                    className="w-5 h-5 text-[rgb(var(--blue-600))] mr-3 flex-shrink-0"
+                    className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -127,7 +135,7 @@ export default function Home() {
       {/* FAQ Section */}
       <AnimatedSection
         id="faq"
-        className="section-padding px-6 bg-[rgb(var(--gray-50))]"
+        className="section-padding px-6 bg-slate-50"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="display-medium text-center mb-16">

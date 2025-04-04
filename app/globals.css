@@ -52,7 +52,7 @@ section {
 
 /* Button hover effects */
 button, a {
-  transition: all 0.2s ease-in-out;
+  transition: opacity transform 0.2s ease-in-out, transform 0.2s ease-in-out;
   cursor: pointer;
 }
 
