@@ -40,15 +40,19 @@ export default function Navigation({ title }: NavigationProps) {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-8">
+      <div className="hidden md:flex">
         {navigationItems.map((item) => (
-          <button
+          <a
             key={item}
-            onClick={() => scrollToSection(item.toLowerCase())}
-            className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors"
+            href={`#${item.toLowerCase()}`}
+            onClick={(_e) => {
+              // e.preventDefault(); // this prevents updating the url with the hash
+              scrollToSection(item.toLowerCase());
+            }}
+            className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors py-2 px-4"
           >
             {item}
-          </button>
+          </a>
         ))}
       </div>
 
@@ -77,13 +81,17 @@ export default function Navigation({ title }: NavigationProps) {
 
           <div className="flex flex-col space-y-4">
             {navigationItems.map((item) => (
-              <button
+              <a
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-lg text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors text-left"
+                href={`#${item.toLowerCase()}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.toLowerCase());
+                }}
+                className="text-lg text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors text-left py-2"
               >
                 {item}
-              </button>
+              </a>
             ))}
           </div>
         </DialogPanel>
