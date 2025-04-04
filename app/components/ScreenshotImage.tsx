@@ -9,11 +9,12 @@ interface ScreenshotImageProps {
 export default function ScreenshotImage({ name, className }: ScreenshotImageProps) {
   const common = { alt: `Screenshot of ${name}`, width: 968, height: 470 };
   const {
-    props: { srcSet: dark },
-  } = getImageProps({ ...common, src: 'screenshot_darkmode.png' });
+    props: { src: dark },
+  } = getImageProps({ ...common, src: '/screenshot_darkmode.png' });
   const {
-    props: { srcSet: light, ...rest },
-  } = getImageProps({ ...common, src: 'screenshot_lightmode.png' });
+    props: { src: light, ...rest },
+  } = getImageProps({ ...common, src: '/screenshot_lightmode.png' });
+  console.log(light, dark, rest);
 
   return (
     <picture className={className}>
