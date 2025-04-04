@@ -7,7 +7,8 @@ import AppleIcon from '../icons/brands/apple.svg';
 
 export const metadata = {
   title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
-  description: 'A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices.',
+  description:
+    'A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices.',
 };
 
 export default function Home() {
@@ -22,12 +23,8 @@ export default function Home() {
       <AnimatedSection className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
           <div className="flex flex-col lg:w-1/2 space-y-8">
-            <h2 className="display-large text-gradient">
-              {marketing.tagline}
-            </h2>
-            <p className="body-large text-[rgb(var(--gray-600))]">
-              {marketing.hero.description}
-            </p>
+            <h2 className="display-large text-gradient">{marketing.tagline}</h2>
+            <p className="body-large text-[rgb(var(--gray-600))]">{marketing.hero.description}</p>
             <a
               download
               href="https://updates.hiddenfilecleaner.app/latest.dmg"
@@ -42,7 +39,7 @@ export default function Home() {
           </div>
           <div className="lg:w-1/2">
             <Image
-              className="hidden lg:block"
+              className="hidden md:block"
               src="/hiddenfilecleaner.png"
               alt="Hidden File Cleaner Icon"
               priority
@@ -54,23 +51,20 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Features Section */}
-      <AnimatedSection
-        id="features"
-        className="section-padding px-6 relative overflow-hidden bg-slate-50"
-      >
+      <AnimatedSection id="features" className="section-padding px-6 relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute left-1/2 -translate-x-1/2 top-[400px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.100)_0%,transparent_70%)]" />
+          <div className="absolute top-[350px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.100)_0%,transparent_40%)]" />
+          <div className="absolute left-1/2 top-[450px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.200)_0%,transparent_50%)]" />
         </div>
         <div className="max-w-7xl mx-auto relative">
           <div className="mb-16">
-            <div className="relative max-w-3xl mx-auto overflow-hidden" style={{ height: '466px' }}>
-              <div className="absolute left-0 right-0 bottom-0 bg-gradient-to-b from-transparent via-transparent to-white z-10" style={{ height: '200px' }} />
+            <div className="px-2 mobile:w-[200%] w-full max-w-[1600px] lg:px-4 xl:px-8 2xl:px-16">
               <Image
-                src="/screenshot.png"
+                src="/screenshot_lightmode.png"
                 alt="Hidden File Cleaner Screenshot"
-                width={774}
-                height={581}
-                className="relative mx-auto"
+                width={968}
+                height={470}
+                className="max-w-full"
               />
             </div>
           </div>
@@ -90,10 +84,7 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Pricing Section */}
-      <AnimatedSection
-        id="pricing"
-        className="section-padding px-6"
-      >
+      <AnimatedSection id="pricing" className="section-padding px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="display-medium mb-6">{marketing.pricing.title}</h2>
           <p className="body-large text-[rgb(var(--gray-600))] mb-12 max-w-2xl mx-auto">
@@ -113,39 +104,25 @@ export default function Home() {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
             <BuyButton />
-            <p className="text-sm text-[rgb(var(--gray-600))]">
-              {marketing.pricing.volumePricing}
-            </p>
+            <p className="text-sm text-[rgb(var(--gray-600))]">{marketing.pricing.volumePricing}</p>
           </div>
         </div>
       </AnimatedSection>
 
       {/* FAQ Section */}
-      <AnimatedSection
-        id="faq"
-        className="section-padding px-6 bg-slate-50"
-      >
+      <AnimatedSection id="faq" className="section-padding px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="display-medium text-center mb-16">
-            {marketing.faq.title}
-          </h2>
+          <h2 className="display-medium text-center mb-16">{marketing.faq.title}</h2>
           <div className="max-w-3xl mx-auto">
             {marketing.faq.questions.length === 0 ? (
-              <p className="text-center text-[rgb(var(--gray-600))] body-large">
-                FAQ content coming soon...
-              </p>
+              <p className="text-center text-[rgb(var(--gray-600))] body-large">FAQ content coming soon...</p>
             ) : (
               // FAQ content will be added here
               <div></div>
