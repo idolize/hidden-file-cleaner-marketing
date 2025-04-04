@@ -1,6 +1,6 @@
 import AnimatedSection from './AnimatedSection';
 import BuyButton from './BuyButton';
-import CheckmarkIcon from '../icons/light/check.svg';
+import CheckmarkIcon from '@/app/icons/light/check.svg';
 import { sectionStyles, cardStyles, textStyles, layoutStyles } from '../styles/shared';
 
 interface PricingSectionProps {

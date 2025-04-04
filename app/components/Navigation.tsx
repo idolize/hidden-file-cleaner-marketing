@@ -4,8 +4,8 @@ import { Dialog, DialogPanel, DialogBackdrop, DialogTitle } from '@headlessui/re
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import BarsIcon from '../icons/regular/bars.svg';
-import XMarkIcon from '../icons/solid/xmark.svg';
+import BarsIcon from '@/app/icons/regular/bars.svg';
+import XMarkIcon from '@/app/icons/solid/xmark.svg';
 
 interface NavigationProps {
   title: string;

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
-import AppleIcon from '../icons/brands/apple.svg';
+import AppleIcon from '@/app/icons/brands/apple.svg';
 import { sectionStyles, textStyles, layoutStyles } from '../styles/shared';
 
 interface HeroSectionProps {

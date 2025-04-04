@@ -1,4 +1,9 @@
 *.svg
 
 # include only icons we are using
-!/solid/check.svg
+!brands/apple.svg
+!light/check.svg
+!solid/xmark.svg
+!regular/chevron-down.svg
+!regular/arrow-left.svg
+!regular/bars.svg

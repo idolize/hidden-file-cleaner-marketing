@@ -20,10 +20,10 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="/eula"
               className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors"
             >
-              Terms of Service
+              EULA
             </Link>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createMDX from '@next/mdx';
 import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 
 // Here we use the @cloudflare/next-on-pages next-dev module to allow us to
@@ -9,11 +10,11 @@ import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 setupDevPlatform().catch(console.error);
 
 const nextConfig: NextConfig = {
-  output: "export",
-
   // TODO try Cloudflare Image Optimization
   // https://developers.cloudflare.com/images/transform-images/integrate-with-frameworks/
   images: { unoptimized: true },
+
+  pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 
   experimental: {
     reactCompiler: true,
@@ -34,8 +35,8 @@ const nextConfig: NextConfig = {
           loader: '@svgr/webpack',
         },
       ],
-    })
-    return config
+    });
+    return config;
   },
 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
@@ -48,4 +49,9 @@ const nextConfig: NextConfig = {
   // distDir: 'dist',
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+});
+
+// Merge MDX config with Next.js config
+export default withMDX(nextConfig);
