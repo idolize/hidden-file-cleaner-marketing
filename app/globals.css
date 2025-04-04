@@ -154,3 +154,19 @@ a {
   line-height: 1.6;
   font-weight: 400;
 }
+
+/* FAQ Animation */
+@keyframes slide-up {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: var(--content-height);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}

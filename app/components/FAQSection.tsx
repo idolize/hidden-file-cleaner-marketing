@@ -1,4 +1,5 @@
 import AnimatedSection from './AnimatedSection';
+import FAQItem from './FAQItem';
 import { sectionStyles, textStyles, layoutStyles } from '../styles/shared';
 
 interface FAQQuestion {
@@ -20,7 +21,11 @@ export default function FAQSection({ title, questions }: FAQSectionProps) {
           {questions.length === 0 ? (
             <p className={`text-center ${textStyles.grayText} ${textStyles.bodyLarge}`}>FAQ content coming soon...</p>
           ) : (
-            <div></div>
+            <div className="flex flex-col gap-4">
+              {questions.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
+            </div>
           )}
         </div>
       </div>
