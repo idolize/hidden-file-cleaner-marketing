@@ -3,6 +3,7 @@ import marketing from '../../content/marketing.json';
 import Navigation from '../components/Navigation';
 import AnimatedSection from '../components/AnimatedSection';
 import BuyButton from '../components/BuyButton';
+import CheckmarkIcon from '../icons/light/check.svg';
 import AppleIcon from '../icons/brands/apple.svg';
 
 export const metadata = {
@@ -58,13 +59,13 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto relative">
           <div className="mb-16">
-            <div className="px-2 mobile:w-[200%] w-full max-w-[1600px] lg:px-4 xl:px-8 2xl:px-16">
+            <div className="px-2 w-[200%] lg:w-full max-w-[1600px] lg:px-4 xl:px-8 2xl:px-16">
               <Image
                 src="/screenshot_lightmode.png"
                 alt="Hidden File Cleaner Screenshot"
                 width={968}
                 height={470}
-                className="max-w-full"
+                className="max-w-full lg:m-auto"
               />
             </div>
           </div>
@@ -98,14 +99,7 @@ export default function Home() {
             <ul className="space-y-4 mb-12">
               {marketing.pricing.features.map((feature, index) => (
                 <li key={index} className="flex items-center justify-center text-lg">
-                  <svg
-                    className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <CheckmarkIcon className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}

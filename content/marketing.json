@@ -28,10 +28,9 @@
     "price": "8.99",
     "currency": "USD",
     "features": [
-      "Perpetual license",
-      "Free updates",
       "One-time payment",
-      "No monthly fees"
+      "No monthly fees",
+      "Free updates"
     ],
     "volumePricing": "Contact us for volume licensing options"
   },
