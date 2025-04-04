@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+      </head>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
         <main className="flex-grow">{children}</main>
         <Footer />

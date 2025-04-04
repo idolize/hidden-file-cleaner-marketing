@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import ChevronDownIcon from '../icons/regular/chevron-down.svg';
+import ChevronDownIcon from '@/app/icons/regular/chevron-down.svg';
 
 interface FAQItemProps {
   question: string;

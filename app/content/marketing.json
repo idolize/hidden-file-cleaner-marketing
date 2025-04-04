@@ -4,6 +4,9 @@
   "hero": {
     "description": "Hidden File Cleaner is a Mac app that cleans annoying hidden files from your drives."
   },
+  "embed": {
+    "tagline": ".DS_Store is no more"
+  },
   "features": [
     {
       "title": "One-Click Cleanup",

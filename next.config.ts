@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
   pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 
   experimental: {
-    reactCompiler: true,
     turbo: {
       rules: {
         '*.svg': {
