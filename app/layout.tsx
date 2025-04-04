@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Footer from "./components/Footer";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Footer from './components/Footer';
+import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hidden File Cleaner",
-  description: "Clean hidden files from your system",
+  title: 'Hidden File Cleaner',
+  description: 'Clean hidden files from your system',
 };
 
 export default function RootLayout({
@@ -20,10 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head></head>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
