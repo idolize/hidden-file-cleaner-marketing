@@ -46,7 +46,6 @@ export default function Navigation({ title }: NavigationProps) {
             key={item}
             href={`#${item.toLowerCase()}`}
             onClick={(_e) => {
-              // e.preventDefault(); // this prevents updating the url with the hash
               scrollToSection(item.toLowerCase());
             }}
             className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors py-2 px-4"
@@ -71,7 +70,7 @@ export default function Navigation({ title }: NavigationProps) {
       >
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
 
-        <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-xs bg-white p-6 shadow-xl">
+        <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-xs bg-[rgb(var(--background-rgb))] p-6 shadow-xl">
           <div className="flex items-center justify-between mb-8">
             <DialogTitle className="text-xl font-semibold">{title}</DialogTitle>
             <button type="button" onClick={() => setMobileMenuOpen(false)} className="text-[rgb(var(--gray-600))]">

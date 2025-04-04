@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  /* Apple-inspired color palette */
+  /* Light mode colors */
   --foreground-rgb: 29, 29, 31;
   --background-rgb: 255, 255, 255;
   --gray-50: 250, 250, 252;
@@ -10,6 +10,32 @@
   --gray-600: 108, 108, 112;
   --blue-600: 0, 122, 255;
   --blue-700: 0, 102, 215;
+  --section-alt: 245, 245, 247;
+
+  /* Gradient colors */
+  --gradient-from: 158, 251, 199;
+  --gradient-to: 29, 94, 213;
+  --gradient-alt-from: 255, 128, 181;
+  --gradient-alt-to: 158, 251, 199;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 19, 19, 19;
+    --gray-50: 28, 29, 30;
+    --gray-100: 35, 36, 37;
+    --gray-200: 45, 46, 47;
+    --gray-600: 160, 160, 165;
+    --section-alt: 28, 29, 30;
+
+    /* Dark mode gradient colors - slightly adjusted for dark mode */
+    --gradient-from: 158, 251, 199;
+    --gradient-to: 29, 94, 213;
+    --gradient-alt-from: 101, 55, 73;
+    --gradient-alt-to: 61, 102, 69;
+  }
 }
 
 body {
@@ -83,6 +109,24 @@ a {
 
 .bg-gradient {
   background: linear-gradient(135deg, rgb(var(--blue-600)), rgb(var(--blue-700)));
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(var(--gradient-from), 0.2), rgba(var(--gradient-to), 0.2));
+}
+
+.hero-gradient-alt {
+  background: linear-gradient(135deg, rgba(var(--gradient-alt-from), 0.4), rgba(var(--gradient-alt-to), 0.4));
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(var(--gradient-from), 0.25), rgba(var(--gradient-to), 0.25));
+  }
+
+  .hero-gradient-alt {
+    background: linear-gradient(135deg, rgba(var(--gradient-alt-from), 1), rgba(var(--gradient-alt-to), 0.4));
+  }
 }
 
 .section-padding {

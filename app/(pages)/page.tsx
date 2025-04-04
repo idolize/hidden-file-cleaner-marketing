@@ -15,9 +15,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[rgb(var(--background-rgb))]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-xl z-50 border-b border-[rgb(var(--gray-200))]">
+      <header className="fixed top-0 left-0 right-0 bg-[rgb(var(--background-rgb))]/80 backdrop-blur-xl z-50 border-b border-[rgb(var(--gray-200))]">
         <Navigation title={marketing.title} />
       </header>
 
@@ -28,11 +28,11 @@ export default function Home() {
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         >
           <div
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] hero-gradient sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#9efbc7] to-[#1d5ed5] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
         <div className="flex flex-col text-center md:text-left md:flex-row items-center md:gap-8 lg:gap-16 z-10">
@@ -48,10 +48,10 @@ export default function Home() {
                 <AppleIcon className="w-5 h-5" />
                 <span>Download Now</span>
               </a>
-              <div className="flex flex-row gap-2 items-center justify-center text-xs">
-                <span className=" text-gray-400">7 Day Free Trial</span>
-                <span className="text-gray-300">•</span>
-                <span className="text-gray-400">macOS 14+</span>
+              <div className="flex flex-row gap-2 items-center justify-center text-xs text-[rgb(var(--gray-600))]">
+                <span>7 Day Free Trial</span>
+                <span>•</span>
+                <span>macOS 14+</span>
               </div>
             </div>
           </div>
@@ -69,22 +69,25 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Features Section */}
-      <AnimatedSection id="features" className="section-padding px-6 relative overflow-hidden bg-slate-50">
+      <AnimatedSection
+        id="features"
+        className="section-padding px-6 relative overflow-hidden bg-[rgb(var(--section-alt))]"
+      >
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[calc(100%-30rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-60rem)]"
         >
           <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-3/4 hero-gradient-alt sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-3/4 bg-gradient-to-tr from-[#ff80b5] to-[#9efbc7] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
           />
         </div>
         <div aria-hidden="true" className="absolute inset-0">
-          <div className="absolute top-[350px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.50)_0%,transparent_40%)]" />
-          <div className="absolute left-1/2 top-[450px] w-[800px] h-[800px] bg-[radial-gradient(circle,theme(colors.blue.200)_0%,transparent_50%)]" />
+          <div className="absolute top-[350px] w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(var(--gradient-to),0.1)_0%,transparent_40%)]" />
+          <div className="absolute left-1/2 top-[450px] w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(var(--gradient-to),0.25)_0%,transparent_50%)]" />
         </div>
         <div className="max-w-7xl mx-auto relative">
           <div className="mb-16">
@@ -97,7 +100,7 @@ export default function Home() {
             {marketing.features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[hsla(0,0%,98%,.7)] p-8 rounded-2xl shadow-md hover:shadow-lg backdrop-blur-xl transition-shadow"
+                className="bg-[rgb(var(--background-rgb))]/70 p-8 rounded-2xl shadow-md hover:shadow-lg backdrop-blur-xl transition-shadow"
               >
                 <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
                 <p className="text-[rgb(var(--gray-600))]">{feature.description}</p>
@@ -114,7 +117,7 @@ export default function Home() {
           <p className="body-large text-[rgb(var(--gray-600))] mb-12 max-w-2xl mx-auto">
             {marketing.pricing.description}
           </p>
-          <div className="bg-white rounded-3xl shadow-lg p-12 max-w-lg mx-auto border border-[rgb(var(--gray-200))]">
+          <div className="bg-[rgb(var(--background-rgb))] rounded-3xl shadow-lg p-12 max-w-lg mx-auto border border-[rgb(var(--gray-200))]">
             <div className="text-5xl font-bold mb-8">
               ${marketing.pricing.price}
               <span className="text-lg text-[rgb(var(--gray-600))] ml-1">/license</span>
@@ -134,14 +137,13 @@ export default function Home() {
       </AnimatedSection>
 
       {/* FAQ Section */}
-      <AnimatedSection id="faq" className="section-padding px-6 bg-slate-50">
+      <AnimatedSection id="faq" className="section-padding px-6 bg-[rgb(var(--section-alt))]">
         <div className="max-w-7xl mx-auto">
           <h2 className="display-medium text-center mb-16">{marketing.faq.title}</h2>
           <div className="max-w-3xl mx-auto">
             {marketing.faq.questions.length === 0 ? (
               <p className="text-center text-[rgb(var(--gray-600))] body-large">FAQ content coming soon...</p>
             ) : (
-              // FAQ content will be added here
               <div></div>
             )}
           </div>
