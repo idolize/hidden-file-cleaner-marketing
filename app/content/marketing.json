@@ -42,7 +42,7 @@
     "questions": [
       {
         "question": "Which specific files does Hidden File Cleaner remove?",
-        "answer": "Hidden File Cleaner removes .DS_Store, .fseventsd, .Spotlight-V100, .Trashes, .apdisk, and ._Filename (aka AppleDouble) files."
+        "answer": "Hidden File Cleaner removes .DS_Store, .fseventsd, .Spotlight-V100, .Trashes, .apdisk, and ._ (aka AppleDouble) files."
       },
       {
         "question": "What are these files? Are there any risks with removing them?",
@@ -50,7 +50,7 @@
       },
       {
         "question": "So what's the problem with these files then?",
-        "answer": "If you only use macOS then typically nothing (they are hidden from you anyway). However, if you transfer files to another computer with a different OS then they will show up, causing confusion and even causing problems in some cases (for example: if you transfer files to a SD card for a game console or other device it may show \"corrupted data\" when it reads these metadata files)."
+        "answer": "If you only ever use macs then typically nothing (they are hidden from you anyway). However, if you transfer files to another computer with a different OS then they will show up, causing confusion and even causing problems in some cases (for example: if you transfer files to a SD card for a game console or other device it may show \"corrupted data\" when it reads these metadata files)."
       },
       {
         "question": "Can't I just use Terminal commands to disable these files?",

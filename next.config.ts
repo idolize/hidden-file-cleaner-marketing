@@ -10,9 +10,12 @@ import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 setupDevPlatform().catch(console.error);
 
 const nextConfig: NextConfig = {
-  // TODO try Cloudflare Image Optimization
+  // Cloudflare Image Optimization
   // https://developers.cloudflare.com/images/transform-images/integrate-with-frameworks/
-  images: { unoptimized: true },
+  images: {
+    loader: 'custom',
+    loaderFile: './imageLoader.ts',
+  },
 
   pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 

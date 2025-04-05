@@ -11,6 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Hidden File Cleaner',
   description: 'Clean hidden files from your system',
+  metadataBase: new URL('https://hiddenfilecleaner.app'),
 };
 
 export default function RootLayout({
