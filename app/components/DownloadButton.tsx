@@ -12,10 +12,11 @@ import XMarkIcon from '@/app/icons/solid/xmark.svg';
 const parser = new UAParser();
 
 interface DownloadButtonProps {
+  hideSubtext?: boolean;
   className?: string;
 }
 
-export default function DownloadButton({ className }: DownloadButtonProps) {
+export default function DownloadButton({ className, hideSubtext }: DownloadButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMac, setIsMac] = useState(true);
 
@@ -34,11 +35,13 @@ export default function DownloadButton({ className }: DownloadButtonProps) {
         <AppleIcon className="w-5 h-5" />
         <span>Download Now</span>
       </button>
-      <div className="flex flex-row gap-2 items-center justify-center text-xs text-[rgb(var(--gray-600))]">
-        <span>7 Day Free Trial</span>
-        <span>•</span>
-        <span>macOS 14+</span>
-      </div>
+      {!hideSubtext && (
+        <div className="flex flex-row gap-2 items-center justify-center text-xs text-[rgb(var(--gray-600))]">
+          <span>7 Day Free Trial</span>
+          <span>•</span>
+          <span>macOS 14+</span>
+        </div>
+      )}
 
       <Dialog
         open={isOpen}

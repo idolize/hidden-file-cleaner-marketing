@@ -39,7 +39,7 @@ export default function Home() {
       <FAQSection title={marketing.faq.title} questions={marketing.faq.questions} />
 
       {/* CTA Section */}
-      <CTASection title={marketing.cta.title} description={marketing.cta.description} />
+      <CTASection description={marketing.cta.description} />
     </main>
   );
 }
