@@ -68,7 +68,9 @@ export default function DownloadButton({ className }: DownloadButtonProps) {
 
             {!isMac && (
               <div className="bg-yellow-50 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-900 rounded-md p-4 text-yellow-800 dark:text-yellow-200">
-                <p className="text-sm">Hidden File Cleaner is designed for macOS desktop computers.</p>
+                <p className="text-sm">
+                  <strong>NOTE:</strong> Hidden File Cleaner only works on macOS desktop computers.
+                </p>
               </div>
             )}
 
