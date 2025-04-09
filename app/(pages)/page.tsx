@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';
 import PricingSection from '../components/PricingSection';
 import FAQSection from '../components/FAQSection';
+import CTASection from '../components/CTASection';
 
 export const metadata = {
   title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
@@ -36,6 +37,9 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQSection title={marketing.faq.title} questions={marketing.faq.questions} />
+
+      {/* CTA Section */}
+      <CTASection title={marketing.cta.title} description={marketing.cta.description} />
     </main>
   );
 }

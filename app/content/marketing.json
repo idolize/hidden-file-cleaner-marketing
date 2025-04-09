@@ -57,5 +57,8 @@
         "answer": "You can get macOS to stop creating .DS_Store files specifically on certain types of external disks, but unfortunately other types of hidden files will still be created."
       }
     ]
+  },
+  "cta": {
+    "description": "Try it for free! No credit card required."
   }
 }
