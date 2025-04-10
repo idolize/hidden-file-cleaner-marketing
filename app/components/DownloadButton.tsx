@@ -30,10 +30,10 @@ export default function DownloadButton({ className, hideSubtext }: DownloadButto
     <div className={`flex flex-col gap-2 m-auto ${className}`}>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-gradient flex flex-row gap-2 items-center text-white px-16 lg:px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
+        className="bg-gradient flex flex-row gap-2 items-center text-left text-white px-16 lg:px-8 py-4 rounded-full text-sm min-[345px]:text-lg font-medium hover:opacity-90 transition-opacity"
       >
         <AppleIcon className="w-5 h-5" />
-        <span>Download Now</span>
+        <span className="line-clamp-1">Download Now</span>
       </button>
       {!hideSubtext && (
         <div className="flex flex-row gap-2 items-center justify-center text-xs text-[rgb(var(--gray-600))]">
@@ -81,10 +81,10 @@ export default function DownloadButton({ className, hideSubtext }: DownloadButto
               <a
                 href="https://updates.hiddenfilecleaner.app/latest.dmg"
                 download
-                className="bg-gradient flex flex-row gap-3 items-center justify-center text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity w-full"
+                className="bg-gradient flex flex-row gap-3 items-center justify-center text-white px-8 py-4 rounded-full text-sm min-[415px]:text-lg font-medium hover:opacity-90 transition-opacity w-full"
               >
                 <DownloadIcon className="w-4 h-4" />
-                <span>Download (Universal)</span>
+                <span className="line-clamp-1">Download (Universal)</span>
               </a>
 
               <div className="space-y-4">
