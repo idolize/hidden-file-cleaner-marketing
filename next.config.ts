@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
           loaders: ['@svgr/webpack'],
           as: '*.js',
         },
+        '*.yaml': {
+          loaders: ['yaml-loader'],
+          as: '*.js',
+        },
       },
     },
   },
@@ -35,6 +39,14 @@ const nextConfig: NextConfig = {
       use: [
         {
           loader: '@svgr/webpack',
+        },
+      ],
+    });
+    config.module.rules.push({
+      test: /\.ya?ml$/i,
+      use: [
+        {
+          loader: 'yaml-loader',
         },
       ],
     });

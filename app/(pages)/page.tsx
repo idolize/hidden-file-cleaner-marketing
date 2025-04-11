@@ -1,4 +1,4 @@
-import marketing from '../content/marketing.json';
+import marketing from '@/app/content/marketing.yaml';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';

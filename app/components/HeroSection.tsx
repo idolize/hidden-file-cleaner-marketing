@@ -17,7 +17,7 @@ export default function HeroSection({ title, tagline, description }: HeroSection
         <div className="flex flex-col text-center md:text-left md:flex-row items-center md:gap-8 lg:gap-16 z-10">
           <div className="flex flex-col md:w-2/3 lg:w-1/2 space-y-8">
             <h2 className={textStyles.displayLarge}>{tagline}</h2>
-            <p className={`${textStyles.bodyLarge} ${textStyles.grayText}`}>{description}</p>
+            <div className={`${textStyles.bodyLarge} ${textStyles.grayText}`}>{description}</div>
             <DownloadButton className="md:ml-0" />
           </div>
           <div className="md:w-1/3 lg:w-1/2">

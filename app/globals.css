@@ -130,6 +130,15 @@ a {
   }
 }
 
+.faq-list ul {
+  list-style-type: disc;
+  margin-left: 0.5rem;
+
+  li {
+    margin-left: 1rem;
+  }
+}
+
 .section-padding {
   padding-top: 6rem;
   padding-bottom: 6rem;

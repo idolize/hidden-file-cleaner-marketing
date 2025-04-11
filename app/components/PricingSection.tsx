@@ -16,7 +16,7 @@ export default function PricingSection({ title, description, price, features, vo
     <AnimatedSection id="pricing" className={sectionStyles.base}>
       <div className={`${layoutStyles.maxWidth} text-center`}>
         <h2 className={`${textStyles.displayMedium} mb-6`}>{title}</h2>
-        <p className={`${textStyles.bodyLarge} ${textStyles.grayText} mb-12 max-w-2xl mx-auto`}>{description}</p>
+        <div className={`${textStyles.bodyLarge} ${textStyles.grayText} mb-12 max-w-2xl mx-auto`}>{description}</div>
         <div className={cardStyles.pricingCard}>
           <div className="text-5xl font-bold mb-8">
             ${price}

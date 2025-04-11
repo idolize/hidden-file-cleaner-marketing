@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import ChevronDownIcon from '@/app/icons/regular/chevron-down.svg';
+import MarkdownContent from './MarkdownContent';
 
 interface FAQItemProps {
   question: string;
@@ -42,7 +43,7 @@ export default function FAQItem({ question, answer }: FAQItemProps) {
         <div ref={contentRef}>
           <div className="border border-t-0 border-[rgb(var(--gray-200))] rounded-b-md px-4 py-4">
             <div className="text-base leading-relaxed text-[rgb(var(--gray-600))]">
-              <p>{answer}</p>
+              <MarkdownContent className="flex flex-col gap-4 faq-list" content={answer} />
             </div>
           </div>
         </div>

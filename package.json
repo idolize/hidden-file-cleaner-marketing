@@ -18,6 +18,7 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.2.4",
+    "micromark": "^4.0.2",
     "next": "15.2.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -46,6 +47,7 @@
     "serve": "^14",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "wrangler": "^4.7.0"
+    "wrangler": "^4.7.0",
+    "yaml-loader": "^0.8.1"
   }
 }

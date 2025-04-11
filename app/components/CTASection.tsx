@@ -12,7 +12,7 @@ export default function CTASection({ description }: CTASectionProps) {
         <div
           className={`text-center w-full flex flex-col items-center border border-[rgb(var(--gray-200))] rounded-md p-5 md:p-12 max-w-3xl`}
         >
-          <p className={`${textStyles.bodyLarge} mb-8 max-w-2xl mx-auto`}>{description}</p>
+          <div className={`${textStyles.bodyLarge} mb-8 max-w-2xl mx-auto`}>{description}</div>
           <DownloadButton hideSubtext />
         </div>
       </div>

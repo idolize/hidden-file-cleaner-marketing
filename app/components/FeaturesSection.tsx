@@ -1,5 +1,6 @@
 import AnimatedSection from './AnimatedSection';
 import ScreenshotImage from './ScreenshotImage';
+import MarkdownContent from './MarkdownContent';
 import { sectionStyles, cardStyles, textStyles, layoutStyles } from '../styles/shared';
 
 interface Feature {
@@ -42,7 +43,9 @@ export default function FeaturesSection({ title, features }: FeaturesSectionProp
           {features.map((feature, index) => (
             <div key={index} className={cardStyles.featureCard}>
               <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
-              <p className={textStyles.grayText}>{feature.description}</p>
+              <div className={textStyles.grayText}>
+                <MarkdownContent content={feature.description} />
+              </div>
             </div>
           ))}
         </div>

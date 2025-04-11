@@ -1,4 +1,4 @@
-import marketing from '@/app/content/marketing.json';
+import marketing from '@/app/content/marketing.yaml';
 
 /* eslint-disable @next/next/no-img-element */
 interface SocialPreviewImageProps {

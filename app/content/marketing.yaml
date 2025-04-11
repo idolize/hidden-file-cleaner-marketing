@@ -1,0 +1,59 @@
+title: Hidden File Cleaner
+tagline: Keep your drives clean
+hero:
+  description: Hidden File Cleaner is a Mac app that ensures annoying hidden files don't clutter your drives.
+embed:
+  tagline: .DS_Store is no more
+features:
+  - title: One-Click Cleanup
+    description: Remove hidden files like **.DS_Store**, **.Spotlight-V100**, and more with a single click.
+  - title: No Accidental Removals
+    description: Preview exactly what will be removed before cleaning. No surprises.
+  - title: Finder Integration
+    description: Clean right from Finder by right clicking and selecting 'Clean with Hidden File Cleaner'.
+  - title: Lightweight & Simple
+    description: No menu bar clutter or background processes. Run it when you need it.
+pricing:
+  title: Simple, One-Time Pricing
+  description: Purchase once, use forever. No subscriptions or hidden fees.
+  price: 8.99
+  currency: USD
+  features:
+    - One-time payment
+    - No monthly fees
+    - Free updates
+  volumePricing: Contact us for volume licensing options
+faq:
+  title: Frequently Asked Questions
+  questions:
+    - question: What specific files does Hidden File Cleaner remove from my drives?
+      answer: |
+        Hidden File Cleaner removes unnecessary macOS metadata files, including
+        **.DS_Store**, **.fseventsd**, **.Spotlight-V100**, **.Trashes**, **.apdisk**, and **._ (AppleDouble)** files.
+    - question: What are these hidden metadata files on my drives?
+      answer: |
+        None of these files are essential, but they are created automatically when you open a drive in Finder.
+        They are hidden on macOS, but will show up on other operating systems.
+
+        These files serve various system functions, for example:
+
+        - **.DS_Store:** Stores folder view preferences (list view, grid view, etc.) and file positions.
+        - **._ (aka AppleDouble):** Stores metadata like custom user-set icons in Finder.
+        - **.Spotlight-V100:** Stores Spotlight indexing data for the external drive.
+
+        Hidden File Cleaner clears them to keep your drives tidy and compatible with non-Mac systems.
+    - question: Why would I want to remove these hidden metadata files from my drives?
+      answer: |
+        If you only use Macs, these files are usually hidden and won’t bother you.
+        However, when transferring files to devices with different operating systems, these hidden files become visible
+        and can cause confusion – or even issues.
+
+        For instance, transferring files to an SD card for a game console or other device might result in
+        “corrupted data” errors due to these metadata files.
+        Removing them ensures smooth compatibility and a cleaner experience across platforms.
+    - question: Can't I use Terminal commands to disable these files?
+      answer: |
+        Yes and no. It is possible to use Terminal commands to get macOS to stop creating **.DS_Store** files specifically
+        on certain types of external disks. However, other types of hidden metadata files will still be created.
+cta:
+  description: Try it for free for 7 days! No credit card required.
