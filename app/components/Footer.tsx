@@ -25,6 +25,12 @@ export default function Footer() {
             >
               EULA
             </Link>
+            <a
+              href="mailto:support@hiddenfilecleaner.app"
+              className="text-sm text-[rgb(var(--gray-600))] hover:text-[rgb(var(--foreground-rgb))] transition-colors"
+            >
+              Support
+            </a>
           </div>
         </div>
       </div>

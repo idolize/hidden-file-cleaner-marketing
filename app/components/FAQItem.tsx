@@ -43,7 +43,7 @@ export default function FAQItem({ question, answer }: FAQItemProps) {
         <div ref={contentRef}>
           <div className="border border-t-0 border-[rgb(var(--gray-200))] rounded-b-md px-4 py-4">
             <div className="text-base leading-relaxed text-[rgb(var(--gray-600))]">
-              <MarkdownContent className="flex flex-col gap-4 faq-list" content={answer} />
+              <MarkdownContent className="flex flex-col gap-4 faq-prose" content={answer} />
             </div>
           </div>
         </div>

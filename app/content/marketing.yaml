@@ -45,16 +45,20 @@ faq:
         Hidden File Cleaner clears them to keep your drives tidy and compatible with non-Mac systems.
     - question: Why would I want to remove these hidden metadata files from my drives?
       answer: |
-        If you only use Macs, these files are usually hidden and won’t bother you.
+        If you only use Macs, these files are usually hidden and won't bother you.
         However, when transferring files to devices with different operating systems, these hidden files become visible
         and can cause confusion – or even issues.
 
         For instance, transferring files to an SD card for a game console or other device might result in
-        “corrupted data” errors due to these metadata files.
+        "corrupted data" errors due to these metadata files.
         Removing them ensures smooth compatibility and a cleaner experience across platforms.
     - question: Can't I use Terminal commands to disable these files?
       answer: |
         Yes and no. It is possible to use Terminal commands to get macOS to stop creating **.DS_Store** files specifically
         on certain types of external disks. However, other types of hidden metadata files will still be created.
+    - question: How can I get support for Hidden File Cleaner?
+      answer: |
+        We're here to help! You can reach us at [support@hiddenfilecleaner.app](mailto:support@hiddenfilecleaner.app).
+        We typically respond within 48 hours during business days.
 cta:
   description: Try it for free for 7 days! No credit card required.
