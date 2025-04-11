@@ -25,6 +25,7 @@ export interface FAQ {
 export interface Marketing {
   title: string;
   tagline: string;
+  pageTitle: string;
   hero: {
     description: string;
   };

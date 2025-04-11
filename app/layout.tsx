@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Footer from './components/Footer';
 import './globals.css';
+import marketing from './content/marketing.yaml';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -9,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Hidden File Cleaner',
-  description: 'Clean hidden files from your system',
+  title: marketing.pageTitle,
+  description: marketing.hero.description,
   metadataBase: new URL('https://hiddenfilecleaner.app'),
 };
 

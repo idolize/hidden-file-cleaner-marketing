@@ -6,12 +6,6 @@ import PricingSection from '../components/PricingSection';
 import FAQSection from '../components/FAQSection';
 import CTASection from '../components/CTASection';
 
-export const metadata = {
-  title: 'Hidden File Cleaner - Remove macOS metadata clutter in a single click',
-  description:
-    'A native Mac app that effortlessly cleans annoying metadata files from external drives, making your storage experience seamless across all devices.',
-};
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-[rgb(var(--background-rgb))]">
