@@ -10,6 +10,8 @@ import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 setupDevPlatform().catch(console.error);
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+
   // Cloudflare Image Optimization
   // https://developers.cloudflare.com/images/transform-images/integrate-with-frameworks/
   images: {
@@ -33,6 +35,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -51,6 +54,15 @@ const nextConfig: NextConfig = {
       ],
     });
     return config;
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/.well-known/apple-app-site-association',
+        headers: [{ key: 'Content-Type', value: 'application/json' }],
+      },
+    ];
   },
 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
