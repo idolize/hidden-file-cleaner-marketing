@@ -8,7 +8,7 @@ export default function ProseDocument({
 }: {
   title: string;
   children: React.ReactNode;
-  meta: { lastUpdated?: string };
+  meta?: { lastUpdated?: string };
 }) {
   return (
     <div className="min-h-screen mb-16">
@@ -25,9 +25,7 @@ export default function ProseDocument({
             </Link>
           </div>
           <h1 className="text-3xl font-bold text-[rgb(var(--foreground-rgb))]">{title}</h1>
-          <p className="mt-2 text-[rgb(var(--gray-600))]">
-            Last updated: {meta.lastUpdated ?? new Date().toLocaleDateString()}
-          </p>
+          {meta?.lastUpdated && <p className="mt-2 text-[rgb(var(--gray-600))]">Last updated: {meta.lastUpdated}</p>}
         </div>
       </header>
 

@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "599G9R4TT4.app.hiddenfilecleaner.HiddenFileCleaner",
+                "paths": ["/app/activate"]
+            }
+        ]
+    }
+}
