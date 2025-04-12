@@ -8,7 +8,10 @@ export default function RedirectHome() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/');
+    const timeout = setTimeout(() => {
+      router.replace('/');
+    }, 2000);
+    return () => clearTimeout(timeout);
   }, [router]);
 
   return (

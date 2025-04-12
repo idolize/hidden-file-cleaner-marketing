@@ -1,10 +1,11 @@
 import { ImageResponse } from 'next/og';
+import marketing from './content/marketing.yaml';
+import SocialPreviewImage from './components/SocialPreviewImage';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import SocialPreviewImage from './components/SocialPreviewImage';
 
 // Image metadata
-export const alt = 'Hidden File Cleaner - Remove macOS metadata clutter in a single click';
+export const alt = marketing.pageTitle;
 export const size = {
   width: 1200,
   height: 630,
@@ -12,6 +13,7 @@ export const size = {
 export const contentType = 'image/png';
 
 // Image generation
+// https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#generate-images-using-code-js-ts-tsx
 export default async function Image() {
   // Load the app icon, screenshot, and fonts
   const [iconData, screenshotData, interRegular, interBold] = await Promise.all([
