@@ -7,13 +7,15 @@ embed:
   tagline: .DS_Store is no more
 features:
   - title: One-Click Cleanup
-    description: Remove hidden files like **.DS_Store**, **.Spotlight-V100**, and more. It even works on ZIP files!
+    description: Remove hidden files like **.DS_Store**, **.Spotlight-V100**, and more. It even works on **ZIP files**!
   - title: No Accidental Removals
-    description: Preview exactly what will be removed before cleaning. No surprises.
+    description: Preview exactly what will be removed **before cleaning**. No surprises.
   - title: Finder Integration
-    description: Clean right from Finder by right clicking and selecting 'Clean with Hidden File Cleaner'.
+    description: Clean directly from Finder by **right clicking** and selecting 'Clean with Hidden File Cleaner'.
   - title: Background Cleaning
-    description: Optionally keep certain locations clean automatically.
+    description: |
+      **Automatically remove hidden files** from selected locations.
+      Enable this optional feature for continuous cleanup instead of manual cleaning.
 pricing:
   title: Simple, One-Time Pricing
   description: Purchase once, use forever. No subscriptions or hidden fees.
