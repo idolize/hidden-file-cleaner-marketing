@@ -7,13 +7,13 @@ embed:
   tagline: .DS_Store is no more
 features:
   - title: One-Click Cleanup
-    description: Remove hidden files like **.DS_Store**, **.Spotlight-V100**, and more with a single click.
+    description: Remove hidden files like **.DS_Store**, **.Spotlight-V100**, and more. It even works on ZIP files!
   - title: No Accidental Removals
     description: Preview exactly what will be removed before cleaning. No surprises.
   - title: Finder Integration
     description: Clean right from Finder by right clicking and selecting 'Clean with Hidden File Cleaner'.
-  - title: Lightweight & Simple
-    description: No menu bar clutter or background processes. Run it when you need it.
+  - title: Background Cleaning
+    description: Optionally keep certain locations clean automatically.
 pricing:
   title: Simple, One-Time Pricing
   description: Purchase once, use forever. No subscriptions or hidden fees.
@@ -56,6 +56,11 @@ faq:
       answer: |
         Yes and no. It is possible to use Terminal commands to get macOS to stop creating **.DS_Store** files specifically
         on certain types of external disks. However, other types of hidden metadata files will still be created.
+    - question: How does the Background Cleaning feature work?
+      answer: |
+        Background Cleaning runs quietly in your menu bar, automatically removing hidden metadata files as soon as
+        they're created in specified locations. It remains idle otherwise, using virtually no CPU or resources.
+        This saves you the hassle of manually cleaning your drives.
     - question: How can I get support for Hidden File Cleaner?
       answer: |
         We're here to help! You can reach us at [support@hiddenfilecleaner.app](mailto:support@hiddenfilecleaner.app).
