@@ -1,0 +1,61 @@
+export const metadata = {
+  title: 'How to Disable .DS_Store Files on macOS',
+  description:
+    'Learn how to prevent macOS from creating .DS_Store files on network shares and USB drives, and discover a better solution with Hidden File Cleaner.',
+};
+
+# How to Stop macOS from Creating .DS_Store Files
+
+## What Are .DS_Store Files?
+
+When you browse folders in Finder, macOS creates hidden files called `.DS_Store` in the background. These files store things like icon positions, window sizes, and sort preferences.
+
+While you’ll never see them on a Mac, they show up when using the same drive on Windows, Linux, or other platforms—leading to confusion and clutter.
+
+## Option 1: Disable .DS_Store Creation via Terminal
+
+macOS includes settings you can change using Terminal to stop creating `.DS_Store` files on certain types of drives.
+
+### To prevent them on network drives
+
+```bash
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+```
+
+### To prevent them on USB drives
+
+```bash
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
+```
+
+**Note:**
+- You’ll need to log out or restart for the changes to take effect
+- These commands only apply to the specific types of drives mentioned
+- They only prevent the creation of new `.DS_Store` files - they don't remove existing ones
+
+## Option 2: A Simpler Approach with Hidden File Cleaner
+
+If you’d rather skip the Terminal and manage things through a friendly UI, **Hidden File Cleaner** makes it easy:
+
+1. Open Hidden File Cleaner
+2. Go to **Settings → Files → More Options**
+3. Toggle off `.DS_Store` file creation on network and USB volumes
+
+!["Hidden File Cleaner Settings"](/settings-hfc-files-macos.png)
+
+That's it! No Terminal commands required.
+
+### Why Hidden File Cleaner Might Be a Better Choice
+
+Disabling `.DS_Store` creation is a good start—but what about the files already on your drives? Hidden File Cleaner goes further:
+
+- **Clean up existing hidden files**, including `.DS_Store`, `.Trashes`, `.Spotlight-V100`, and more
+- **Preview exactly what will be removed** before anything happens
+- **Enable Background Cleaning** to automatically remove hidden files as soon as they appear
+- **Works across all drive types**, not just networks or USB
+
+## Final Thoughts
+
+If you’re just looking to reduce some `.DS_Store` clutter, Terminal commands can do the trick. But for a complete solution, Hidden File Cleaner offers a more powerful and convenient approach.
+
+👉 [Download Hidden File Cleaner](/) and keep your drives clean, cross-platform-friendly, and free from hidden junk.

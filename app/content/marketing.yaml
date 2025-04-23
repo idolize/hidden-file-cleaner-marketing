@@ -49,19 +49,19 @@ faq:
       answer: |
         If you only use Macs, these files are usually hidden and won't bother you.
         However, when transferring files to devices with different operating systems, these hidden files become visible
-        and can cause confusion – or even issues.
+        and can **cause confusion – or even issues**.
 
         For instance, transferring files to an SD card for a game console or other device might result in
         "corrupted data" errors due to these metadata files.
         Removing them ensures smooth compatibility and a cleaner experience across platforms.
     - question: Can't I use Terminal commands to disable these files?
       answer: |
-        Yes and no. It is possible to use Terminal commands to get macOS to stop creating **.DS_Store** files specifically
-        on certain types of external disks. However, other types of hidden metadata files will still be created.
+        Partially. It is possible to use Terminal commands to get macOS to stop creating **.DS_Store** files specifically
+        on certain types of external disks. However, other types of hidden metadata files will still be created. [Learn More.](/articles/disable-ds-store)
     - question: How does the Background Cleaning feature work?
       answer: |
-        Background Cleaning runs quietly in your menu bar, automatically removing hidden metadata files as soon as
-        they're created in specified locations. It remains idle otherwise, using virtually no CPU or resources.
+        Background Cleaning runs quietly in your menu bar, **automatically removing hidden metadata files as soon as
+        they're created** in specified locations. It remains idle otherwise, using virtually no CPU or resources.
         This saves you the hassle of manually cleaning your drives.
     - question: How can I get support for Hidden File Cleaner?
       answer: |

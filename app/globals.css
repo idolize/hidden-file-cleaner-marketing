@@ -9,6 +9,7 @@
   --gray-100: 245, 245, 247;
   --gray-200: 229, 229, 234;
   --gray-600: 108, 108, 112;
+  --gray-900: 60, 60, 65;
   --blue-600: 0, 122, 255;
   --blue-700: 0, 102, 215;
   --section-alt: 245, 245, 247;
@@ -29,6 +30,7 @@
     --gray-100: 35, 36, 37;
     --gray-200: 45, 46, 47;
     --gray-600: 160, 160, 165;
+    --gray-900: 220, 220, 225;
     --section-alt: 28, 29, 30;
 
     /* Dark mode gradient colors - slightly adjusted for dark mode */
@@ -131,8 +133,12 @@ a {
 }
 
 .faq-prose {
-  a:hover {
-    text-decoration: underline;
+  a {
+    color: rgb(var(--gray-900));
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   ul {

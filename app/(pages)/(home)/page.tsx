@@ -1,18 +1,19 @@
 import marketing from '@/app/content/marketing.yaml';
-import Navigation from '../components/Navigation';
-import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
-import PricingSection from '../components/PricingSection';
-import FAQSection from '../components/FAQSection';
-import CTASection from '../components/CTASection';
+import Navigation from '../../components/Navigation';
+import HeroSection from '../../components/HeroSection';
+import FeaturesSection from '../../components/FeaturesSection';
+import PricingSection from '../../components/PricingSection';
+import FAQSection from '../../components/FAQSection';
+import CTASection from '../../components/CTASection';
+import HeaderMain from '../../components/HeaderMain';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[rgb(var(--background-rgb))]">
+    <div className="min-h-screen bg-[rgb(var(--background-rgb))]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-[rgb(var(--background-rgb))]/80 backdrop-blur-xl z-50 border-b border-[rgb(var(--gray-200))]">
+      <HeaderMain>
         <Navigation title={marketing.title} />
-      </header>
+      </HeaderMain>
 
       {/* Hero Section */}
       <HeroSection title={marketing.title} tagline={marketing.tagline} description={marketing.hero.description} />
@@ -34,6 +35,6 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTASection description={marketing.cta.description} />
-    </main>
+    </div>
   );
 }
