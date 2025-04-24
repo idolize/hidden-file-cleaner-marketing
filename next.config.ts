@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 import createMDX from '@next/mdx';
 import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
+import remarkGfm from 'remark-gfm';
 
 // Here we use the @cloudflare/next-on-pages next-dev module to allow us to
 // use bindings during local development (when running the application with
@@ -77,6 +78,10 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+  },
 });
 
 // Merge MDX config with Next.js config
