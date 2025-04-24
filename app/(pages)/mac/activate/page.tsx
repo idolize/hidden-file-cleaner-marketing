@@ -2,10 +2,12 @@
 
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 import ProseDocument from '@/app/components/ProseDocument';
 import RedirectHome from '@/app/components/RedirectHome';
 import DownloadModal from '../../../components/DownloadModal';
+import CopyableInput from '@/app/components/CopyableInput';
 
 function ActivateBody() {
   const searchParams = useSearchParams();
@@ -20,15 +22,15 @@ function ActivateBody() {
           {(openModal) => (
             <p className="mb-12">
               To activate your license,{' '}
-              <a
-                href="#"
+              <Link
+                href="/"
                 onClick={(e) => {
                   e.preventDefault();
                   openModal();
                 }}
               >
                 ensure Hidden File Cleaner is installed
-              </a>{' '}
+              </Link>{' '}
               and then click the button below...
             </p>
           )}
@@ -40,10 +42,8 @@ function ActivateBody() {
       {hasInfo ? (
         <div>
           <hr />
-          <small>License key:</small>
-          <pre className="mt-1">{key}</pre>
-          <small>Email:</small>
-          <pre className="mt-1">{email}</pre>
+          <CopyableInput value={key} label="License key:" />
+          <CopyableInput value={email} label="Email:" />
 
           <p className="mt-14">
             <a
