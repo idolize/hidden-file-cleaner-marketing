@@ -142,7 +142,7 @@ a {
   }
 
   ul {
-    list-style-type: disc;
+    list-style-type: square;
     margin-left: 0.5rem;
 
     li {
