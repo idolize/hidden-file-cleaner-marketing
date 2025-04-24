@@ -17,7 +17,7 @@ export default function BuyButton() {
 
   return (
     <a
-      href="https://store.hiddenfilecleaner.app/buy/2d451c52-16d0-468c-8b98-0f1a770852a8"
+      href="https://store.hiddenfilecleaner.app/buy/5c463630-16b6-41d6-88f2-c6e209f0ec99"
       className="lemonsqueezy-button block bg-gradient text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity w-full mb-6"
     >
       Purchase Now
