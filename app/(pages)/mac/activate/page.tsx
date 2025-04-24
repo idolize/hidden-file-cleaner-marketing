@@ -5,19 +5,37 @@ import { useSearchParams } from 'next/navigation';
 
 import ProseDocument from '@/app/components/ProseDocument';
 import RedirectHome from '@/app/components/RedirectHome';
+import DownloadModal from '../../../components/DownloadModal';
 
 function ActivateBody() {
   const searchParams = useSearchParams();
   const key = searchParams.get('key');
   const email = searchParams.get('email');
   const hasInfo = !!key && !!email;
-  const message = hasInfo
-    ? 'To activate your license, ensure Hidden File Cleaner is installed and then click the button below...'
-    : 'No license info found. Redirecting home...';
 
   return (
     <div>
-      <p className="mb-12">{message}</p>
+      {hasInfo ? (
+        <DownloadModal>
+          {(openModal) => (
+            <p className="mb-12">
+              To activate your license,{' '}
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal();
+                }}
+              >
+                ensure Hidden File Cleaner is installed
+              </a>{' '}
+              and then click the button below...
+            </p>
+          )}
+        </DownloadModal>
+      ) : (
+        <p className="mb-12">No license info found. Redirecting home...</p>
+      )}
 
       {hasInfo ? (
         <div>
