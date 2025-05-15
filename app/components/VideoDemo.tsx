@@ -12,10 +12,13 @@ export default function VideoDemo() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="inline-flex items-center gap-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 shadow-lg text-lg transition focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:text-zinc-900"
+        className="inline-flex items-center gap-3 rounded-full border-2 border-[rgb(var(--blue-600))] hover:border-[rgb(var(--blue-700))] hover:bg-[rgb(var(--blue-700))] text-[rgb(var(--blue-700))] dark:text-[rgb(var(--blue-200))] font-semibold px-8 py-4 shadow-lg text-lg transition focus:outline-none focus:ring-2 focus:ring-[rgb(var(--blue-600))] focus:ring-offset-2"
+        aria-label="Watch demo video"
       >
-        <PlayIcon className="w-7 h-7" />
-        <span>Watch Demo Video</span>
+        <span className="flex items-center justify-center rounded-full w-10 h-10 transition">
+          <PlayIcon className="w-6 h-6 text-white" />
+        </span>
+        <span className="font-semibold">Watch Demo Video</span>
       </button>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <div className="fixed inset-0 bg-black/40 dark:bg-black/80 transition-opacity" aria-hidden="true" />
@@ -42,7 +45,7 @@ export default function VideoDemo() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                ></iframe>
+                />
               </div>
             </div>
           </DialogPanel>
