@@ -12,11 +12,11 @@ export default function VideoDemo() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="inline-flex items-center gap-3 rounded-full border-2 border-[rgb(var(--blue-600))] hover:border-[rgb(var(--blue-700))] hover:bg-[rgb(var(--blue-700))] text-[rgb(var(--blue-700))] dark:text-[rgb(var(--blue-200))] font-semibold px-8 py-4 shadow-lg text-lg transition focus:outline-none focus:ring-2 focus:ring-[rgb(var(--blue-600))] focus:ring-offset-2"
+        className="inline-flex items-center gap-3 rounded-full border-2 border-[rgb(var(--blue-600))] hover:border-[rgb(var(--blue-700))] hover:bg-[rgb(var(--blue-700))] hover:text-white font-semibold px-8 py-4 shadow-lg text-lg transition focus:outline-none focus:ring-2 focus:ring-[rgb(var(--blue-600))] focus:ring-offset-2"
         aria-label="Watch demo video"
       >
         <span className="flex items-center justify-center rounded-full w-10 h-10 transition">
-          <PlayIcon className="w-6 h-6 text-white" />
+          <PlayIcon className="w-6 h-6" />
         </span>
         <span className="font-semibold">Watch Demo Video</span>
       </button>
