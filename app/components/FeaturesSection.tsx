@@ -2,6 +2,7 @@ import AnimatedSection from './AnimatedSection';
 import ScreenshotImage from './ScreenshotImage';
 import MarkdownContent from './MarkdownContent';
 import { sectionStyles, cardStyles, textStyles, layoutStyles } from '../styles/shared';
+import VideoDemo from './VideoDemo';
 
 interface Feature {
   title: string;
@@ -18,7 +19,7 @@ export default function FeaturesSection({ title, features }: FeaturesSectionProp
     <AnimatedSection id="features" className={sectionStyles.withAltBg}>
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-[calc(100%-30rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-60rem)]"
+        className="absolute pointer-events-none inset-x-0 top-[calc(100%-30rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-60rem)]"
       >
         <div
           className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-3/4 hero-gradient-alt sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
@@ -28,7 +29,7 @@ export default function FeaturesSection({ title, features }: FeaturesSectionProp
           }}
         />
       </div>
-      <div aria-hidden="true" className="absolute inset-0">
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[350px] w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(var(--gradient-to),0.1)_0%,transparent_40%)]" />
         <div className="absolute left-1/2 top-[450px] w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(var(--gradient-to),0.25)_0%,transparent_50%)]" />
       </div>
@@ -48,6 +49,10 @@ export default function FeaturesSection({ title, features }: FeaturesSectionProp
               </div>
             </div>
           ))}
+        </div>
+        {/* Video Demo CTA Button */}
+        <div className="flex justify-center mt-12">
+          <VideoDemo />
         </div>
       </div>
     </AnimatedSection>
