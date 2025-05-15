@@ -22,17 +22,15 @@ const nextConfig: NextConfig = {
 
   pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-        '*.yaml': {
-          loaders: ['yaml-loader'],
-          as: '*.js',
-        },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+      '*.yaml': {
+        loaders: ['yaml-loader'],
+        as: '*.js',
       },
     },
   },
