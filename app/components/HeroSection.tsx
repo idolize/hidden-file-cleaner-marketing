@@ -26,8 +26,9 @@ export default function HeroSection({ title, tagline, description }: HeroSection
               src="/hiddenfilecleaner.png"
               alt={`${title} Icon`}
               priority
-              width={512}
-              height={512}
+              quality={90}
+              width={427}
+              height={427}
             />
           </div>
         </div>
