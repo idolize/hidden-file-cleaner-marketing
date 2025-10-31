@@ -20,7 +20,7 @@ export default function HeroSection({ title, tagline, description }: HeroSection
             <div className={`${textStyles.bodyLarge} ${textStyles.grayText}`}>{description}</div>
             <DownloadButton className="md:ml-0" />
           </div>
-          <div className="md:w-1/3 lg:w-1/2">
+          <div className="flex justify-end md:w-1/3 lg:w-1/2">
             <Image
               className="hidden md:block"
               src="/hiddenfilecleaner.png"
